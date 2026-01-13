@@ -1,0 +1,142 @@
+/* UX/UI Improvements - Better contrast, spacing, and mobile experience */
+
+/* Better text contrast - darker colors for readability */
+:root {
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
+  --text-tertiary: #475569;
+  --text-muted: #64748B;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better tap targets for mobile (minimum 44px) */
+button,
+a {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Better form inputs on mobile */
+input,
+select,
+textarea {
+  font-size: 16px !important; /* Prevents zoom on iOS */
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Better focus states for accessibility */
+*:focus-visible {
+  outline: 3px solid #0090ff;
+  outline-offset: 2px;
+}
+
+/* Prevent horizontal scroll on mobile */
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Better section spacing on mobile */
+@media (max-width: 768px) {
+  section {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+/* Improve button touch feedback */
+button:active {
+  transform: scale(0.97);
+}
+
+/* Better card shadows with more depth */
+.shadow-improved {
+  box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.1), 
+              0 2px 4px -1px rgba(15, 23, 42, 0.06);
+}
+
+.shadow-improved-lg {
+  box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.15), 
+              0 4px 6px -2px rgba(15, 23, 42, 0.08);
+}
+
+/* Better spacing utilities */
+.section-padding {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+/* Better text readability */
+p,
+li {
+  line-height: 1.75;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* Improve mobile navigation */
+@media (max-width: 768px) {
+  nav {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Better CTA buttons */
+.btn-primary {
+  background: #0090ff;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 144, 255, 0.3);
+}
+
+.btn-primary:hover {
+  background: #0080e6;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 144, 255, 0.4);
+}
+
+.btn-secondary {
+  background: #ffcf06;
+  color: #0F172A;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(255, 207, 6, 0.3);
+}
+
+.btn-secondary:hover {
+  background: #f0c200;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 207, 6, 0.4);
+}

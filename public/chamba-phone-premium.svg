@@ -1,0 +1,124 @@
+<svg width="450" height="900" viewBox="0 0 450 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background glow layers (multi-color) -->
+  <defs>
+    <!-- Gradient for main glow -->
+    <radialGradient id="blueGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0090ff" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#00c6ff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0090ff" stop-opacity="0"/>
+    </radialGradient>
+    
+    <radialGradient id="yellowGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffcf06" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ffcf06" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Shadow filter -->
+    <filter id="phoneShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="15"/>
+      <feOffset dx="0" dy="20" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Glow filter -->
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="40" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Shine gradient for screen -->
+    <linearGradient id="screenShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="white" stop-opacity="0"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Multi-layer glow background -->
+  <ellipse cx="225" cy="450" rx="180" ry="400" fill="url(#blueGlow)" filter="url(#glow)"/>
+  <ellipse cx="225" cy="450" rx="160" ry="380" fill="url(#yellowGlow)" filter="url(#glow)"/>
+  
+  <!-- Main phone container with shadow -->
+  <g filter="url(#phoneShadow)">
+    <!-- Phone outer frame - Dark (iPhone style) -->
+    <rect x="70" y="80" width="310" height="740" rx="50" fill="#0F172A"/>
+    
+    <!-- Volume buttons (left side) -->
+    <rect x="48" y="220" width="22" height="80" rx="8" fill="#1E293B"/>
+    <rect x="50" y="222" width="18" height="76" rx="7" fill="#334155"/>
+    
+    <!-- Silent switch (left side top) -->
+    <rect x="48" y="180" width="22" height="45" rx="8" fill="#1E293B"/>
+    <rect x="50" y="182" width="18" height="41" rx="7" fill="#334155"/>
+    
+    <!-- Power button (right side) -->
+    <rect x="380" y="260" width="22" height="110" rx="8" fill="#1E293B"/>
+    <rect x="382" y="262" width="18" height="106" rx="7" fill="#334155"/>
+    
+    <!-- Inner bezel -->
+    <rect x="82" y="92" width="286" height="716" rx="42" fill="#1E293B"/>
+    
+    <!-- Actual white screen area -->
+    <rect x="86" y="96" width="278" height="708" rx="38" fill="white"/>
+    
+    <!-- Notch (Dynamic Island style) -->
+    <path d="M 180 96 L 180 108 Q 180 120 192 120 L 205 120 Q 212 120 212 127 L 212 132 Q 212 139 219 139 L 231 139 Q 238 139 238 132 L 238 127 Q 238 120 245 120 L 258 120 Q 270 120 270 108 L 270 96 Z" fill="#0F172A"/>
+    
+    <!-- Notch details -->
+    <circle cx="225" cy="115" r="4" fill="#1E293B" opacity="0.8"/>
+    <ellipse cx="240" cy="115" rx="14" ry="5" fill="#1E293B" opacity="0.4"/>
+    
+    <!-- Screen shine/reflection -->
+    <rect x="86" y="96" width="278" height="708" rx="38" fill="url(#screenShine)"/>
+    
+    <!-- Bottom gesture bar -->
+    <rect x="190" y="790" width="70" height="5" rx="2.5" fill="#CBD5E1" opacity="0.5"/>
+  </g>
+
+  <!-- Floating badge - Top right (Rating) -->
+  <g transform="translate(340, 50)">
+    <rect x="0" y="0" width="85" height="50" rx="20" fill="url(#blueBadge)"/>
+    <defs>
+      <linearGradient id="blueBadge" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0090ff"/>
+        <stop offset="100%" stop-color="#0070cc"/>
+      </linearGradient>
+    </defs>
+    <!-- Star icon -->
+    <path d="M 25 20 L 28 28 L 37 28 L 30 33 L 33 41 L 25 36 L 17 41 L 20 33 L 13 28 L 22 28 Z" fill="white"/>
+    <text x="45" y="32" font-family="sans-serif" font-size="18" font-weight="bold" fill="white">4.8</text>
+  </g>
+
+  <!-- Floating badge - Bottom left (Downloads) -->
+  <g transform="translate(20, 770)">
+    <rect x="0" y="0" width="150" height="50" rx="20" fill="url(#yellowBadge)"/>
+    <defs>
+      <linearGradient id="yellowBadge" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ffcf06"/>
+        <stop offset="100%" stop-color="#f0c200"/>
+      </linearGradient>
+    </defs>
+    <!-- Lightning bolt -->
+    <path d="M 20 15 L 15 30 L 25 28 L 22 40 L 35 22 L 26 24 Z" fill="#0F172A"/>
+    <text x="42" y="32" font-family="sans-serif" font-size="16" font-weight="bold" fill="#0F172A">15K+ Descargas</text>
+  </g>
+
+  <!-- Decorative floating stars -->
+  <g opacity="0.6">
+    <path d="M 50 200 L 52 205 L 57 205 L 53 209 L 55 214 L 50 211 L 45 214 L 47 209 L 43 205 L 48 205 Z" fill="#ffcf06"/>
+    <path d="M 400 600 L 403 606 L 410 606 L 405 610 L 407 617 L 400 613 L 393 617 L 395 610 L 390 606 L 397 606 Z" fill="#0090ff"/>
+    <path d="M 420 350 L 422 354 L 427 354 L 423 357 L 425 362 L 420 359 L 415 362 L 417 357 L 413 354 L 418 354 Z" fill="#ffcf06"/>
+  </g>
+
+  <!-- Brand watermark -->
+  <text x="225" y="880" font-family="sans-serif" font-size="14" font-weight="bold" fill="#94A3B8" text-anchor="middle">CHAMBA</text>
+</svg>

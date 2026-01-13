@@ -1,0 +1,102 @@
+<svg width="450" height="900" viewBox="0 0 450 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background decorativo -->
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0090ff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0090ff" stop-opacity="0"/>
+    </radialGradient>
+    
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="15"/>
+      <feOffset dy="20"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.4"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Patrón de cuadrícula para el placeholder -->
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#E0F2FE" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Glow background -->
+  <ellipse cx="225" cy="450" rx="180" ry="400" fill="url(#bgGlow)"/>
+  
+  <!-- Phone frame with shadow -->
+  <g filter="url(#shadow)">
+    <!-- Outer frame - Black -->
+    <rect x="70" y="80" width="310" height="740" rx="50" fill="#0F172A"/>
+    
+    <!-- Side buttons -->
+    <rect x="48" y="220" width="22" height="80" rx="8" fill="#1E293B"/>
+    <rect x="380" y="260" width="22" height="110" rx="8" fill="#1E293B"/>
+    
+    <!-- Inner bezel -->
+    <rect x="82" y="92" width="286" height="716" rx="42" fill="#1E293B"/>
+    
+    <!-- Screen area WHITE - AQUÍ VA TU IMAGEN -->
+    <rect x="86" y="96" width="278" height="708" rx="38" fill="white"/>
+    
+    <!-- ÁREA PARA IMAGEN - Con guías visuales -->
+    <g id="imageArea">
+      <!-- Grid pattern para guía -->
+      <rect x="86" y="96" width="278" height="708" rx="38" fill="url(#grid)"/>
+      
+      <!-- Texto de instrucción central -->
+      <text x="225" y="430" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#0090ff" text-anchor="middle">
+        INSERTA TU IMAGEN AQUÍ
+      </text>
+      <text x="225" y="455" font-family="Arial, sans-serif" font-size="12" fill="#64748B" text-anchor="middle">
+        Tamaño recomendado: 278×708px
+      </text>
+      
+      <!-- Guías de esquinas -->
+      <rect x="96" y="106" width="30" height="3" fill="#0090ff" opacity="0.5"/>
+      <rect x="96" y="106" width="3" height="30" fill="#0090ff" opacity="0.5"/>
+      
+      <rect x="334" y="106" width="30" height="3" fill="#0090ff" opacity="0.5"/>
+      <rect x="361" y="106" width="3" height="30" fill="#0090ff" opacity="0.5"/>
+      
+      <rect x="96" y="791" width="30" height="3" fill="#0090ff" opacity="0.5"/>
+      <rect x="96" y="764" width="3" height="30" fill="#0090ff" opacity="0.5"/>
+      
+      <rect x="334" y="791" width="30" height="3" fill="#0090ff" opacity="0.5"/>
+      <rect x="361" y="764" width="3" height="30" fill="#0090ff" opacity="0.5"/>
+    </g>
+    
+    <!-- Notch (Dynamic Island) -->
+    <path d="M 180 96 L 180 108 Q 180 120 192 120 L 205 120 Q 212 120 212 127 L 212 132 Q 212 139 219 139 L 231 139 Q 238 139 238 132 L 238 127 Q 238 120 245 120 L 258 120 Q 270 120 270 108 L 270 96 Z" fill="#0F172A"/>
+    
+    <!-- Camera in notch -->
+    <circle cx="225" cy="115" r="4" fill="#1E293B"/>
+    
+    <!-- Bottom gesture bar -->
+    <rect x="190" y="790" width="70" height="5" rx="2.5" fill="#CBD5E1" opacity="0.5"/>
+  </g>
+
+  <!-- Instructivo flotante -->
+  <g transform="translate(30, 30)">
+    <rect x="0" y="0" width="180" height="80" rx="12" fill="white" opacity="0.95"/>
+    <text x="15" y="25" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#0F172A">
+      📝 Cómo usar:
+    </text>
+    <text x="15" y="45" font-family="Arial, sans-serif" font-size="10" fill="#475569">
+      1. Abre este SVG en Figma
+    </text>
+    <text x="15" y="60" font-family="Arial, sans-serif" font-size="10" fill="#475569">
+      2. Arrastra tu imagen aquí
+    </text>
+    <text x="15" y="75" font-family="Arial, sans-serif" font-size="10" fill="#475569">
+      3. Ajusta para que encaje
+    </text>
+  </g>
+
+  <!-- Marca CHAMBA -->
+  <text x="225" y="875" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0090ff" text-anchor="middle">CHAMBA</text>
+  <text x="225" y="890" font-family="Arial, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">Phone Mockup Template</text>
+</svg>

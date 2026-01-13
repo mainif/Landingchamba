@@ -1,0 +1,74 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+@import './improvements.css';
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFDF7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #007BFF 0%, #0056D2 100%);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #0056D2 0%, #003d99 100%);
+}
+
+/* Selection color */
+::selection {
+  background: #FFD100;
+  color: #0F172A;
+}
+
+::-moz-selection {
+  background: #FFD100;
+  color: #0F172A;
+}
+
+/* Gradient text utilities */
+.gradient-text-yellow {
+  background: linear-gradient(135deg, #FFD100 0%, #FFA500 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-blue {
+  background: linear-gradient(135deg, #007BFF 0%, #0056D2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated gradient backgrounds */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}

@@ -1,0 +1,73 @@
+:root {
+  /* CHAMBA Brand Colors - Optimized for better combinations */
+  --color-yellow: #ffcf06;
+  --color-yellow-dark: #f0c200;
+  --color-yellow-light: #fff3cc;
+  
+  --color-blue: #0090ff;
+  --color-blue-dark: #0070cc;
+  --color-blue-light: #e6f4ff;
+  
+  --color-background: #FFFDF7;
+  --color-white: #FFFFFF;
+  
+  --color-text: #0F172A;
+  --color-text-light: #334155;
+  --color-text-muted: #64748B;
+  --color-text-lighter: #94A3B8;
+  
+  /* Semantic colors for better usability */
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  
+  /* Spacing for premium feel */
+  --spacing-section: 8rem;
+  --spacing-content: 2rem;
+  
+  /* Shadows for depth */
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.12);
+  --shadow-lg: 0 8px 32px rgba(15, 23, 42, 0.16);
+  --shadow-xl: 0 16px 48px rgba(15, 23, 42, 0.2);
+}
+
+/* Typography with more air */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
+  color: var(--color-text);
+}
+
+p {
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+  color: var(--color-text-light);
+}
+
+/* More vertical spacing for premium feel */
+section {
+  padding-top: var(--spacing-section);
+  padding-bottom: var(--spacing-section);
+}
+
+/* Smooth transitions everywhere */
+* {
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Better button styles */
+button, .button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+button:hover, .button:hover {
+  transform: translateY(-2px);
+}
+
+button:active, .button:active {
+  transform: translateY(0);
+}

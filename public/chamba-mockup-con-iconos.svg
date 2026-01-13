@@ -1,0 +1,184 @@
+<svg width="500" height="1000" viewBox="0 0 500 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- BACKGROUND EFFECTS -->
+  <defs>
+    <!-- Multi-layer glow gradients -->
+    <radialGradient id="blueGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0090ff" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#00c6ff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0090ff" stop-opacity="0"/>
+    </radialGradient>
+    
+    <radialGradient id="yellowGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffcf06" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ffcf06" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Gradient for badges -->
+    <linearGradient id="blueBadge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0090ff"/>
+      <stop offset="100%" stop-color="#0070cc"/>
+    </linearGradient>
+    
+    <linearGradient id="yellowBadge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffcf06"/>
+      <stop offset="100%" stop-color="#f0c200"/>
+    </linearGradient>
+
+    <!-- Shadow filters -->
+    <filter id="phoneShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="20"/>
+      <feOffset dx="0" dy="30" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.6"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="badgeShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dx="0" dy="5"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Grid pattern for placeholder -->
+    <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse">
+      <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#E0F2FE" stroke-width="0.8"/>
+    </pattern>
+  </defs>
+
+  <!-- BACKGROUND GLOW LAYERS -->
+  <ellipse cx="250" cy="500" rx="200" ry="450" fill="url(#blueGlow)"/>
+  <ellipse cx="250" cy="500" rx="180" ry="420" fill="url(#yellowGlow)"/>
+  
+  <!-- FLOATING DECORATIVE STARS -->
+  <g opacity="0.7">
+    <path d="M 60 250 L 64 260 L 74 260 L 66 266 L 70 276 L 60 270 L 50 276 L 54 266 L 46 260 L 56 260 Z" fill="#ffcf06">
+      <animateTransform attributeName="transform" type="rotate" from="0 60 263" to="360 60 263" dur="10s" repeatCount="indefinite"/>
+    </path>
+    
+    <path d="M 440 650 L 445 662 L 457 662 L 447 670 L 452 682 L 440 675 L 428 682 L 433 670 L 423 662 L 435 662 Z" fill="#0090ff">
+      <animateTransform attributeName="transform" type="rotate" from="0 440 666" to="-360 440 666" dur="12s" repeatCount="indefinite"/>
+    </path>
+    
+    <path d="M 430 380 L 433 386 L 440 386 L 435 390 L 437 397 L 430 393 L 423 397 L 425 390 L 420 386 L 427 386 Z" fill="#ffcf06">
+      <animateTransform attributeName="transform" type="rotate" from="0 430 391" to="360 430 391" dur="8s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- PHONE MOCKUP WITH SHADOW -->
+  <g filter="url(#phoneShadow)">
+    <!-- Phone outer frame -->
+    <rect x="95" y="120" width="310" height="740" rx="50" fill="#0F172A"/>
+    
+    <!-- Volume buttons -->
+    <rect x="73" y="280" width="22" height="85" rx="8" fill="#1E293B"/>
+    <rect x="75" y="282" width="18" height="81" rx="7" fill="#334155"/>
+    
+    <!-- Silent switch -->
+    <rect x="73" y="230" width="22" height="50" rx="8" fill="#1E293B"/>
+    <rect x="75" y="232" width="18" height="46" rx="7" fill="#334155"/>
+    
+    <!-- Power button -->
+    <rect x="405" y="310" width="22" height="115" rx="8" fill="#1E293B"/>
+    <rect x="407" y="312" width="18" height="111" rx="7" fill="#334155"/>
+    
+    <!-- Inner bezel -->
+    <rect x="107" y="132" width="286" height="716" rx="42" fill="#1E293B"/>
+    
+    <!-- White screen area with grid -->
+    <rect x="111" y="136" width="278" height="708" rx="38" fill="white"/>
+    
+    <!-- Grid overlay for photo placement -->
+    <rect x="111" y="136" width="278" height="708" rx="38" fill="url(#grid)"/>
+    
+    <!-- CENTER INSTRUCTION - COLOCA TU FOTO AQUÍ -->
+    <g id="instruction">
+      <rect x="180" y="455" width="140" height="90" rx="12" fill="#0090ff" opacity="0.95"/>
+      <text x="250" y="485" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">
+        COLOCA TU
+      </text>
+      <text x="250" y="508" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">
+        FOTO AQUÍ
+      </text>
+      <text x="250" y="530" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle" opacity="0.9">
+        278×708px
+      </text>
+    </g>
+    
+    <!-- Corner guides -->
+    <rect x="121" y="146" width="35" height="3" fill="#ffcf06"/>
+    <rect x="121" y="146" width="3" height="35" fill="#ffcf06"/>
+    
+    <rect x="354" y="146" width="35" height="3" fill="#ffcf06"/>
+    <rect x="386" y="146" width="3" height="35" fill="#ffcf06"/>
+    
+    <rect x="121" y="831" width="35" height="3" fill="#ffcf06"/>
+    <rect x="121" y="799" width="3" height="35" fill="#ffcf06"/>
+    
+    <rect x="354" y="831" width="35" height="3" fill="#ffcf06"/>
+    <rect x="386" y="799" width="3" height="35" fill="#ffcf06"/>
+    
+    <!-- Notch -->
+    <path d="M 205 136 L 205 148 Q 205 160 217 160 L 230 160 Q 237 160 237 167 L 237 172 Q 237 179 244 179 L 256 179 Q 263 179 263 172 L 263 167 Q 263 160 270 160 L 283 160 Q 295 160 295 148 L 295 136 Z" fill="#0F172A"/>
+    
+    <circle cx="250" cy="155" r="4.5" fill="#1E293B" opacity="0.9"/>
+    <ellipse cx="268" cy="155" rx="16" ry="6" fill="#1E293B" opacity="0.5"/>
+    
+    <!-- Bottom gesture bar -->
+    <rect x="215" y="828" width="70" height="6" rx="3" fill="#CBD5E1" opacity="0.6"/>
+  </g>
+
+  <!-- FLOATING BADGE - TOP RIGHT (RATING) -->
+  <g filter="url(#badgeShadow)">
+    <rect x="365" y="90" width="110" height="60" rx="25" fill="url(#blueBadge)"/>
+    
+    <!-- Star icon -->
+    <path d="M 395 115 L 399 126 L 411 126 L 401 133 L 405 144 L 395 137 L 385 144 L 389 133 L 379 126 L 391 126 Z" fill="white"/>
+    
+    <!-- Rating text -->
+    <text x="420" y="128" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white">4.8</text>
+    
+    <animate attributeName="opacity" values="1;0.85;1" dur="2s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- FLOATING BADGE - BOTTOM LEFT (DOWNLOADS) -->
+  <g filter="url(#badgeShadow)">
+    <rect x="30" y="850" width="185" height="60" rx="25" fill="url(#yellowBadge)"/>
+    
+    <!-- Lightning bolt -->
+    <path d="M 55 870 L 48 890 L 62 887 L 58 905 L 75 883 L 63 885 Z" fill="#0F172A"/>
+    
+    <!-- Downloads text -->
+    <text x="85" y="888" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#0F172A">15K+ Descargas</text>
+    
+    <animate attributeName="opacity" values="1;0.85;1" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+  </g>
+
+  <!-- SPARKLES -->
+  <g opacity="0.8">
+    <path d="M 420 200 L 422 206 L 428 206 L 423 210 L 425 216 L 420 212 L 415 216 L 417 210 L 412 206 L 418 206 Z" fill="#00c6ff">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/>
+    </path>
+    
+    <path d="M 80 500 L 82 506 L 88 506 L 83 510 L 85 516 L 80 512 L 75 516 L 77 510 L 72 506 L 78 506 Z" fill="#ffcf06">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite" begin="0.5s"/>
+    </path>
+    
+    <path d="M 440 750 L 442 754 L 447 754 L 443 757 L 445 762 L 440 759 L 435 762 L 437 757 L 433 754 L 438 754 Z" fill="#00c6ff">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" begin="1s"/>
+    </path>
+  </g>
+
+  <!-- BRANDING -->
+  <text x="250" y="975" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#0090ff" text-anchor="middle">CHAMBA</text>
+  <text x="250" y="995" font-family="Arial, sans-serif" font-size="12" fill="#64748B" text-anchor="middle">Template con Iconos</text>
+</svg>

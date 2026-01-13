@@ -1,7 +1,6 @@
 import { motion } from 'motion/react';
 import { Download, Star, Wrench } from 'lucide-react';
 import { useState } from 'react';
-import svgPaths from '@/imports/svg-5sdcmjxssv';
 
 export function FinalCTA() {
   const [formData, setFormData] = useState({ 
@@ -28,39 +27,27 @@ export function FinalCTA() {
     <section className="relative py-16 sm:py-20 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#4BAFFF] via-[#4096DB] to-[#2D6999] overflow-hidden">
       {/* Decorative stars - matching Figma design */}
       <div className="absolute top-[20%] left-[7.5%] w-14 h-14 sm:w-16 sm:h-16 pointer-events-none">
-        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 71.9689 72.0429">
-          <path d={svgPaths.pfa8d100} stroke="#FFF2BA" strokeLinecap="round" strokeLinejoin="round" strokeWidth="8" />
-        </svg>
+        <Star className="w-full h-full text-[#FFF2BA]" strokeWidth={1.5} />
       </div>
       
       <div className="absolute top-[18%] right-[58%] w-10 h-10 sm:w-12 sm:h-12 pointer-events-none">
-        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 52.9691 53.0432">
-          <path d={svgPaths.p33e480e0} stroke="#BFE2F5" strokeLinecap="round" strokeLinejoin="round" strokeWidth="8" />
-        </svg>
+        <Star className="w-full h-full text-[#BFE2F5]" strokeWidth={1.5} />
       </div>
 
       <div className="absolute top-[30%] left-[6.9%] w-10 h-10 sm:w-12 sm:h-12 pointer-events-none">
-        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 52.9691 53.0432">
-          <path d={svgPaths.p33e480e0} stroke="#BFE2F5" strokeLinecap="round" strokeLinejoin="round" strokeWidth="8" />
-        </svg>
+        <Star className="w-full h-full text-[#BFE2F5]" strokeWidth={1.5} />
       </div>
 
       <div className="absolute top-[33%] right-[2.6%] w-9 h-9 sm:w-10 sm:h-10 pointer-events-none">
-        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 52.9691 53.0432">
-          <path d={svgPaths.p33e480e0} stroke="#BFE2F5" strokeLinecap="round" strokeLinejoin="round" strokeWidth="8" />
-        </svg>
+        <Star className="w-full h-full text-[#BFE2F5]" strokeWidth={1.5} />
       </div>
 
       <div className="absolute bottom-[20%] left-[32%] w-14 h-14 sm:w-16 sm:h-16 pointer-events-none">
-        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 71.9689 72.0429">
-          <path d={svgPaths.pfa8d100} stroke="#FFF2BA" strokeLinecap="round" strokeLinejoin="round" strokeWidth="8" />
-        </svg>
+        <Star className="w-full h-full text-[#FFF2BA]" strokeWidth={1.5} />
       </div>
 
       <div className="absolute bottom-[10%] right-[38%] w-20 h-20 sm:w-24 sm:h-24 pointer-events-none">
-        <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 112.021 112.021">
-          <path d={svgPaths.p177b1d42} stroke="#BBE0FE" strokeLinecap="round" strokeLinejoin="round" strokeWidth="8" />
-        </svg>
+        <Star className="w-full h-full text-[#BBE0FE]" strokeWidth={1.5} />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -94,11 +81,7 @@ export function FinalCTA() {
                 transition={{ duration: 0.6 }}
                 style={{ opacity: 0.2 }}
               />
-              <div className="w-5 h-5 sm:w-6 sm:h-6 relative z-10">
-                <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 21 24">
-                  <path d={svgPaths.p16e1a480} stroke="#2D3444" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" />
-                </svg>
-              </div>
+              <Download className="w-5 h-5 sm:w-6 sm:h-6 relative z-10 text-[#2D3444]" strokeWidth={2.5} />
               <span className="relative z-10">Descargar CHAMBA</span>
             </motion.button>
           </motion.div>

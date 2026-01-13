@@ -1,7 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react';
-import { Mail, Phone, MapPin, FileText, Shield, X } from 'lucide-react';
-import chambaLogo from 'figma:asset/0199ac367f38328e9cbab82108c85f56d68cd27d.png';
-import svgPaths from '@/imports/svg-cfkl1es9jv';
+import { Mail, Phone, MapPin, FileText, Shield, X, Apple, Play, Facebook, Instagram } from 'lucide-react';
+import chambaLogo from '@/assets/CHAMPA_LOGO-2.png';
 import { useState } from 'react';
 
 export function Footer() {
@@ -92,9 +91,7 @@ export function Footer() {
                     rel="noopener noreferrer"
                     className="text-[#94a3b8] hover:text-white transition-colors outfit-medium text-base sm:text-lg flex items-center gap-3 group"
                   >
-                    <svg className="w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 24">
-                      <path d={svgPaths.p19650700} />
-                    </svg>
+                    <Apple className="w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
                     <span>App Store</span>
                   </a>
                 </li>
@@ -105,9 +102,7 @@ export function Footer() {
                     rel="noopener noreferrer"
                     className="text-[#94a3b8] hover:text-white transition-colors outfit-medium text-base sm:text-lg flex items-center gap-3 group"
                   >
-                    <svg className="w-[13.5px] h-[22.5px] flex-shrink-0 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 13.5 22.5">
-                      <path d={svgPaths.p2a73a300} />
-                    </svg>
+                    <Play className="w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
                     <span>Google Play</span>
                   </a>
                 </li>
@@ -162,9 +157,7 @@ export function Footer() {
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" viewBox="0 0 28 28">
-                    <path d={svgPaths.p3ffd07a0} stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
-                  </svg>
+                  <Facebook className="w-6 h-6 sm:w-7 sm:h-7" />
                 </motion.a>
                 <motion.a 
                   href="https://instagram.com/chamba.pe" 
@@ -175,9 +168,7 @@ export function Footer() {
                   whileHover={{ scale: 1.1, rotate: -5 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <svg className="w-6 h-6" fill="white" viewBox="0 0 26 26">
-                    <path d={svgPaths.p2ed50d90} />
-                  </svg>
+                  <Instagram className="w-6 h-6" />
                 </motion.a>
               </div>
             </motion.div>

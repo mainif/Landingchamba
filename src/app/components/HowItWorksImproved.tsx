@@ -1,10 +1,10 @@
 import { motion } from 'motion/react';
 import { Target, Users, MessageCircle, Wrench, Star, Check } from 'lucide-react';
-import imgSolicitudPublicada from 'figma:asset/d0a67c862949c1a9d6f63dff780e12d4f0b471f7.png';
-import imgSolicitudesRecibidas from 'figma:asset/d599e249ae8f0c00ad7a1a61b36df0f30c02f6b1.png';
-import imgPerfil from 'figma:asset/fac9235b637aad0d32527b46024227ea4a5cd0bd.png';
-import imgHistorialTrabajos from 'figma:asset/6000f3ade45923baa58675ebabeec9b12425efe2.png';
-import imgCalificar from 'figma:asset/fcb9811b060745daf42b782be8a7c48ad3650250.png';
+import imgSolicitudPublicada from '@/assets/paso 1.png';
+import imgSolicitudesRecibidas from '@/assets/paso 2.png';
+import imgPerfil from '@/assets/paso 3.png';
+import imgHistorialTrabajos from '@/assets/paso 4.png';
+import imgCalificar from '@/assets/paso 5.png';
 
 export function HowItWorksImproved() {
   const steps = [

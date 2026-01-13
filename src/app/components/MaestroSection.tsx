@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Briefcase, TrendingUp, MessageCircle } from 'lucide-react';
-import imgChambasDisponibles from 'figma:asset/d0a67c862949c1a9d6f63dff780e12d4f0b471f7.png';
+import imgChambasDisponibles from '@/assets/maestor.png';
 
 export function MaestroSection() {
   const fadeInUp = {

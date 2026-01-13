@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Shield, Search, CreditCard, CheckCircle } from 'lucide-react';
-import imgHomePage2 from 'figma:asset/fae02b3b871f7232b2e1b59f8ea942b5205e059d.png';
+import imgHomePage2 from '@/assets/cliente.png';
 
 export function ClientSection() {
   const fadeInUp = {

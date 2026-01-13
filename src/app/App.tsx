@@ -8,12 +8,12 @@ import { MaestroSection } from './components/MaestroSection';
 import { Testimonials } from './components/Testimonials';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
-import { MockupsGallery } from './components/MockupsGallery';
-import { SVGCodeViewer } from './components/SVGCodeViewer';
+import { LoadingScreen } from './components/LoadingScreen';
 
 export default function App() {
   const [scrollY, setScrollY] = useState(0);
   const [currentPage, setCurrentPage] = useState('home');
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,14 +37,9 @@ export default function App() {
     };
   }, []);
 
-  // Render SVG code viewer page
-  if (currentPage === 'svg-code') {
-    return <SVGCodeViewer />;
-  }
-
-  // Render mockups gallery page
-  if (currentPage === 'mockups') {
-    return <MockupsGallery />;
+  // Mostrar pantalla de carga
+  if (isLoading) {
+    return <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />;
   }
 
   // Render landing page

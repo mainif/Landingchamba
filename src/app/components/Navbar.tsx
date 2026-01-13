@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Download } from 'lucide-react';
 import { motion } from 'motion/react';
-import chambaLogo from 'figma:asset/c26cb048535e3323ebc1515237a7e9564bc4433e.png';
+import chambaLogo from '@/assets/CHAMPA_LOGO.png';
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,7 +42,7 @@ export function Navbar() {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
-            <img src={chambaLogo} alt="CHAMBA" className="h-8 md:h-10" />
+            <img src={chambaLogo} alt="CHAMBA" className="h-10 md:h-14" />
           </motion.div>
 
           {/* Desktop Menu - Centered usando flex-grow */}
@@ -120,7 +120,7 @@ export function Navbar() {
             >
               Quiero chamba
             </button>
-            <div className="pt-2 flex justify-start">
+            <div className="pt-2 flex justify-center">
               <button className="bg-[#ffcf06] hover:bg-[#f0c200] active:bg-[#e0b200] text-[#0F172A] px-6 py-4 rounded-xl shadow-lg inline-flex items-center gap-2 outfit-bold text-base transition-all">
                 <Download className="w-5 h-5" />
                 Descargar CHAMBA

@@ -40,17 +40,15 @@ export function Footer() {
             </motion.p>
           </div>
 
-          {/* Grid de Secciones */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-12 lg:gap-16 mb-12 sm:mb-16">
             
-            {/* Sección: Enlaces */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <h3 className="text-white outfit-bold uppercase tracking-wider text-sm sm:text-base mb-5 sm:mb-6 h-[28px] flex items-center">Enlaces</h3>
+              <h3 className="text-white outfit-bold uppercase tracking-wider text-sm sm:text-base mb-5 sm:mb-6">Enlaces</h3>
               <ul className="space-y-3">
                 <li>
                   <a href="#for-clients" className="text-[#94a3b8] hover:text-[#0090ff] transition-colors outfit-semibold text-base sm:text-lg block group">
@@ -75,24 +73,22 @@ export function Footer() {
               </ul>
             </motion.div>
 
-            {/* Sección: Descarga */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <h3 className="text-white outfit-bold uppercase tracking-wider text-sm sm:text-base mb-5 sm:mb-6 h-[28px] flex items-center">Disponible en</h3>
+              <h3 className="text-white outfit-bold uppercase tracking-wider text-sm sm:text-base mb-5 sm:mb-6">Disponible en</h3>
               <ul className="space-y-3">
                 <li>
                   <a 
                     href="https://apps.apple.com/app/chamba" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#94a3b8] hover:text-white transition-colors outfit-semibold text-base sm:text-lg flex items-center gap-3 group"
+                    className="text-[#94a3b8] hover:text-white transition-colors outfit-semibold text-base sm:text-lg block group"
                   >
-                    <Apple className="w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                    <span className="font-bold">App Store</span>
+                    <span className="inline-block group-hover:translate-x-1 transition-transform font-bold">App Store</span>
                   </a>
                 </li>
                 <li>
@@ -100,40 +96,36 @@ export function Footer() {
                     href="https://play.google.com/store/apps/chamba" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#94a3b8] hover:text-white transition-colors outfit-semibold text-base sm:text-lg flex items-center gap-3 group"
+                    className="text-[#94a3b8] hover:text-white transition-colors outfit-semibold text-base sm:text-lg block group"
                   >
-                    <Play className="w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                    <span className="font-bold">Google Play</span>
+                    <span className="inline-block group-hover:translate-x-1 transition-transform font-bold">Google Play</span>
                   </a>
                 </li>
               </ul>
             </motion.div>
 
-            {/* Sección: Contacto */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <h3 className="text-white outfit-bold uppercase tracking-wider text-sm sm:text-base mb-5 sm:mb-6 h-[28px] flex items-center">Contacto</h3>
+              <h3 className="text-white outfit-bold uppercase tracking-wider text-sm sm:text-base mb-5 sm:mb-6">Contacto</h3>
               <ul className="space-y-3">
                 <li>
                   <a 
                     href="mailto:informes@chamba.click" 
-                    className="text-[#94a3b8] hover:text-[#0090ff] transition-colors outfit-semibold text-base sm:text-lg flex items-center gap-3 group"
+                    className="text-[#94a3b8] hover:text-[#0090ff] transition-colors outfit-semibold text-base sm:text-lg block group"
                   >
-                    <Mail className="w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                    <span className="break-all font-bold">informes@chamba.click</span>
+                    <span className="inline-block group-hover:translate-x-1 transition-transform font-bold break-all">informes@chamba.click</span>
                   </a>
                 </li>
                 <li>
                   <a 
                     href="tel:+51948569046" 
-                    className="text-[#94a3b8] hover:text-[#0090ff] transition-colors outfit-semibold text-base sm:text-lg flex items-center gap-3 group"
+                    className="text-[#94a3b8] hover:text-[#0090ff] transition-colors outfit-semibold text-base sm:text-lg block group"
                   >
-                    <Phone className="w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                    <span className="font-bold">+51 948 569 046</span>
+                    <span className="inline-block group-hover:translate-x-1 transition-transform font-bold">+51 948 569 046</span>
                   </a>
                 </li>
               </ul>

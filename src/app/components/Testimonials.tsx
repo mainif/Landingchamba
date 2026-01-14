@@ -168,7 +168,7 @@ export function Testimonials() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-[#0F172A] mb-4 sm:mb-6 leading-tight">
             Historias reales
           </h2>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#364357] outfit-medium max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#364357] outfit-bold max-w-2xl mx-auto">
             Clientes y maestros que confían en CHAMBA
           </p>
         </motion.div>
@@ -227,7 +227,7 @@ export function Testimonials() {
                         </div>
                         
                         {/* Text */}
-                        <p className="text-white text-base sm:text-lg leading-relaxed outfit-medium">
+                        <p className="text-white text-base sm:text-lg leading-relaxed outfit-semibold">
                           {testimonial.text}
                         </p>
                       </div>

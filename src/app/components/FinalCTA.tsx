@@ -62,7 +62,7 @@ export function FinalCTA() {
               Conecta tu condominio con maestros verificados.
             </h2>
             
-            <p className="text-xl sm:text-2xl lg:text-3xl text-[#364357] gilroy-medium">
+            <p className="text-xl sm:text-2xl lg:text-3xl text-[#364357] outfit-bold">
               Descarga CHAMBA y empieza hoy.
             </p>
 

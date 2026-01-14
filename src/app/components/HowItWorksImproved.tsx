@@ -80,7 +80,7 @@ export function HowItWorksImproved() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center text-[#0F172A] mb-4 sm:mb-6 px-4">
             Así de <span className="text-[#0090ff]">simple</span>
           </h2>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#64748B] outfit-medium max-w-2xl mx-auto px-4">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#64748B] outfit-bold max-w-2xl mx-auto px-4">
             5 pasos para conectar tu empresa con maestros verificados
           </p>
         </motion.div>
@@ -134,7 +134,7 @@ export function HowItWorksImproved() {
                         {step.title}
                       </h3>
                       
-                      <p className="text-base sm:text-lg lg:text-xl text-[#64748B] outfit-medium leading-relaxed max-w-md mx-auto md:mx-0">
+                      <p className="text-base sm:text-lg lg:text-xl text-[#64748B] outfit-semibold leading-relaxed max-w-md mx-auto md:mx-0">
                         {step.description}
                       </p>
 
@@ -146,13 +146,13 @@ export function HowItWorksImproved() {
                               <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-gradient-to-br from-[#0090ff] to-[#0070cc] flex items-center justify-center">
                                 <Check className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                               </div>
-                              <span className="text-sm sm:text-base text-[#64748B] outfit-medium">Describe en segundos</span>
+                              <span className="text-sm sm:text-base text-[#64748B] outfit-semibold">Describe en segundos</span>
                             </div>
                             <div className="flex items-center gap-2 sm:gap-3">
                               <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-gradient-to-br from-[#0090ff] to-[#0070cc] flex items-center justify-center">
                                 <Check className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                               </div>
-                              <span className="text-sm sm:text-base text-[#64748B] outfit-medium">Agrega fotos</span>
+                              <span className="text-sm sm:text-base text-[#64748B] outfit-semibold">Agrega fotos</span>
                             </div>
                           </>
                         )}
@@ -162,13 +162,13 @@ export function HowItWorksImproved() {
                               <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-gradient-to-br from-[#ffcf06] to-[#f0c200] flex items-center justify-center">
                                 <Check className="w-3 h-3 sm:w-4 sm:h-4 text-[#0F172A]" />
                               </div>
-                              <span className="text-sm sm:text-base text-[#64748B] outfit-medium">Maestros verificados</span>
+                              <span className="text-sm sm:text-base text-[#64748B] outfit-semibold">Maestros verificados</span>
                             </div>
                             <div className="flex items-center gap-2 sm:gap-3">
                               <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-gradient-to-br from-[#ffcf06] to-[#f0c200] flex items-center justify-center">
                                 <Check className="w-3 h-3 sm:w-4 sm:h-4 text-[#0F172A]" />
                               </div>
-                              <span className="text-sm sm:text-base text-[#64748B] outfit-medium">Compara precios</span>
+                              <span className="text-sm sm:text-base text-[#64748B] outfit-semibold">Compara precios</span>
                             </div>
                           </>
                         )}
@@ -178,13 +178,13 @@ export function HowItWorksImproved() {
                               <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-gradient-to-br from-[#0090ff] to-[#0070cc] flex items-center justify-center">
                                 <Check className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                               </div>
-                              <span className="text-sm sm:text-base text-[#64748B] outfit-medium">Chat directo</span>
+                              <span className="text-sm sm:text-base text-[#64748B] outfit-semibold">Chat directo</span>
                             </div>
                             <div className="flex items-center gap-2 sm:gap-3">
                               <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-gradient-to-br from-[#0090ff] to-[#0070cc] flex items-center justify-center">
                                 <Check className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                               </div>
-                              <span className="text-sm sm:text-base text-[#64748B] outfit-medium">Coordina horarios</span>
+                              <span className="text-sm sm:text-base text-[#64748B] outfit-semibold">Coordina horarios</span>
                             </div>
                           </>
                         )}
@@ -194,13 +194,13 @@ export function HowItWorksImproved() {
                               <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-gradient-to-br from-[#ffcf06] to-[#f0c200] flex items-center justify-center">
                                 <Check className="w-3 h-3 sm:w-4 sm:h-4 text-[#0F172A]" />
                               </div>
-                              <span className="text-sm sm:text-base text-[#64748B] outfit-medium">Seguimiento en vivo</span>
+                              <span className="text-sm sm:text-base text-[#64748B] outfit-semibold">Seguimiento en vivo</span>
                             </div>
                             <div className="flex items-center gap-2 sm:gap-3">
                               <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-gradient-to-br from-[#ffcf06] to-[#f0c200] flex items-center justify-center">
                                 <Check className="w-3 h-3 sm:w-4 sm:h-4 text-[#0F172A]" />
                               </div>
-                              <span className="text-sm sm:text-base text-[#64748B] outfit-medium">100% seguro</span>
+                              <span className="text-sm sm:text-base text-[#64748B] outfit-semibold">100% seguro</span>
                             </div>
                           </>
                         )}
@@ -210,13 +210,13 @@ export function HowItWorksImproved() {
                               <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-gradient-to-br from-[#0090ff] to-[#0070cc] flex items-center justify-center">
                                 <Check className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                               </div>
-                              <span className="text-sm sm:text-base text-[#64748B] outfit-medium">Califica fácilmente</span>
+                              <span className="text-sm sm:text-base text-[#64748B] outfit-semibold">Califica fácilmente</span>
                             </div>
                             <div className="flex items-center gap-2 sm:gap-3">
                               <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-gradient-to-br from-[#0090ff] to-[#0070cc] flex items-center justify-center">
                                 <Check className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                               </div>
-                              <span className="text-sm sm:text-base text-[#64748B] outfit-medium">Ayuda a la comunidad</span>
+                              <span className="text-sm sm:text-base text-[#64748B] outfit-semibold">Ayuda a la comunidad</span>
                             </div>
                           </>
                         )}

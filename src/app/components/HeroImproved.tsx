@@ -64,7 +64,7 @@ export function HeroImproved({ scrollY }: HeroProps) {
               <span className="block sm:inline"> para tu condominio</span>
             </h1>
             
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#334155] outfit-semibold leading-relaxed max-w-3xl mx-auto mb-12 sm:mb-16 md:mb-20">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#334155] outfit-bold leading-relaxed max-w-3xl mx-auto mb-12 sm:mb-16 md:mb-20">
               Multiservicios a tu alcance
             </p>
 

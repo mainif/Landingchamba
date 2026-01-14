@@ -86,7 +86,7 @@ export function MaestroSection() {
               ¿Buscas chamba?
             </h2>
 
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#64748B] mb-6 sm:mb-8 md:mb-10 leading-relaxed gilroy-medium">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#64748B] mb-6 sm:mb-8 md:mb-10 leading-relaxed outfit-bold">
               Encuentra trabajos cerca de ti y construye tu reputación.
             </p>
 

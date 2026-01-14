@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'motion/react';
-import { Mail, Phone, MapPin, FileText, Shield, X, Apple, Play, Facebook, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, FileText, Shield, X, Apple, Play } from 'lucide-react';
 import chambaLogo from '@/assets/CHAMPA_LOGO-2.png';
 import { useState } from 'react';
 
@@ -30,7 +30,7 @@ export function Footer() {
               <img src={chambaLogo} alt="CHAMBA" className="h-full w-auto object-contain" />
             </motion.div>
             <motion.p 
-              className="text-[#94a3b8] outfit-medium text-base sm:text-lg leading-relaxed max-w-md"
+              className="text-[#94a3b8] outfit-semibold text-base sm:text-lg leading-relaxed max-w-md"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -41,7 +41,7 @@ export function Footer() {
           </div>
 
           {/* Grid de Secciones */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-16 mb-12 sm:mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-12 lg:gap-16 mb-12 sm:mb-16">
             
             {/* Sección: Enlaces */}
             <motion.div
@@ -50,26 +50,26 @@ export function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <h3 className="text-white outfit-bold uppercase tracking-wider text-sm sm:text-base mb-5 sm:mb-6">Enlaces</h3>
+              <h3 className="text-white outfit-bold uppercase tracking-wider text-sm sm:text-base mb-5 sm:mb-6 h-[28px] flex items-center">Enlaces</h3>
               <ul className="space-y-3">
                 <li>
-                  <a href="#for-clients" className="text-[#94a3b8] hover:text-[#0090ff] transition-colors outfit-medium text-base sm:text-lg block group">
-                    <span className="inline-block group-hover:translate-x-1 transition-transform">Para Clientes</span>
+                  <a href="#for-clients" className="text-[#94a3b8] hover:text-[#0090ff] transition-colors outfit-semibold text-base sm:text-lg block group">
+                    <span className="inline-block group-hover:translate-x-1 transition-transform font-bold">Para Clientes</span>
                   </a>
                 </li>
                 <li>
-                  <a href="#for-maestros" className="text-[#94a3b8] hover:text-[#ffcf06] transition-colors outfit-medium text-base sm:text-lg block group">
-                    <span className="inline-block group-hover:translate-x-1 transition-transform">Para Maestros</span>
+                  <a href="#for-maestros" className="text-[#94a3b8] hover:text-[#ffcf06] transition-colors outfit-semibold text-base sm:text-lg block group">
+                    <span className="inline-block group-hover:translate-x-1 transition-transform font-bold">Para Maestros</span>
                   </a>
                 </li>
                 <li>
-                  <a href="#how-it-works" className="text-[#94a3b8] hover:text-white transition-colors outfit-medium text-base sm:text-lg block group">
-                    <span className="inline-block group-hover:translate-x-1 transition-transform">Cómo Funciona</span>
+                  <a href="#how-it-works" className="text-[#94a3b8] hover:text-white transition-colors outfit-semibold text-base sm:text-lg block group">
+                    <span className="inline-block group-hover:translate-x-1 transition-transform font-bold">Cómo Funciona</span>
                   </a>
                 </li>
                 <li>
-                  <a href="#testimonials" className="text-[#94a3b8] hover:text-white transition-colors outfit-medium text-base sm:text-lg block group">
-                    <span className="inline-block group-hover:translate-x-1 transition-transform">Testimonios</span>
+                  <a href="#testimonials" className="text-[#94a3b8] hover:text-white transition-colors outfit-semibold text-base sm:text-lg block group">
+                    <span className="inline-block group-hover:translate-x-1 transition-transform font-bold">Testimonios</span>
                   </a>
                 </li>
               </ul>
@@ -82,17 +82,17 @@ export function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <h3 className="text-white outfit-bold uppercase tracking-wider text-sm sm:text-base mb-5 sm:mb-6">Disponible en</h3>
+              <h3 className="text-white outfit-bold uppercase tracking-wider text-sm sm:text-base mb-5 sm:mb-6 h-[28px] flex items-center">Disponible en</h3>
               <ul className="space-y-3">
                 <li>
                   <a 
                     href="https://apps.apple.com/app/chamba" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#94a3b8] hover:text-white transition-colors outfit-medium text-base sm:text-lg flex items-center gap-3 group"
+                    className="text-[#94a3b8] hover:text-white transition-colors outfit-semibold text-base sm:text-lg flex items-center gap-3 group"
                   >
                     <Apple className="w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                    <span>App Store</span>
+                    <span className="font-bold">App Store</span>
                   </a>
                 </li>
                 <li>
@@ -100,10 +100,10 @@ export function Footer() {
                     href="https://play.google.com/store/apps/chamba" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#94a3b8] hover:text-white transition-colors outfit-medium text-base sm:text-lg flex items-center gap-3 group"
+                    className="text-[#94a3b8] hover:text-white transition-colors outfit-semibold text-base sm:text-lg flex items-center gap-3 group"
                   >
                     <Play className="w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                    <span>Google Play</span>
+                    <span className="font-bold">Google Play</span>
                   </a>
                 </li>
               </ul>
@@ -116,61 +116,27 @@ export function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <h3 className="text-white outfit-bold uppercase tracking-wider text-sm sm:text-base mb-5 sm:mb-6">Contacto</h3>
+              <h3 className="text-white outfit-bold uppercase tracking-wider text-sm sm:text-base mb-5 sm:mb-6 h-[28px] flex items-center">Contacto</h3>
               <ul className="space-y-3">
                 <li>
                   <a 
-                    href="mailto:contacto@chamba.click" 
-                    className="text-[#94a3b8] hover:text-[#0090ff] transition-colors outfit-medium text-base sm:text-lg flex items-center gap-3 group"
+                    href="mailto:informes@chamba.click" 
+                    className="text-[#94a3b8] hover:text-[#0090ff] transition-colors outfit-semibold text-base sm:text-lg flex items-center gap-3 group"
                   >
                     <Mail className="w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                    <span className="break-all">contacto@chamba.click</span>
+                    <span className="break-all font-bold">informes@chamba.click</span>
                   </a>
                 </li>
                 <li>
                   <a 
-                    href="tel:+51987654321" 
-                    className="text-[#94a3b8] hover:text-[#0090ff] transition-colors outfit-medium text-base sm:text-lg flex items-center gap-3 group"
+                    href="tel:+51948569046" 
+                    className="text-[#94a3b8] hover:text-[#0090ff] transition-colors outfit-semibold text-base sm:text-lg flex items-center gap-3 group"
                   >
                     <Phone className="w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                    <span>+51 987 654 321</span>
+                    <span className="font-bold">+51 948 569 046</span>
                   </a>
                 </li>
               </ul>
-            </motion.div>
-
-            {/* Sección: Redes Sociales */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              <h3 className="text-white outfit-bold uppercase tracking-wider text-sm sm:text-base mb-5 sm:mb-6">Síguenos</h3>
-              <div className="flex items-center gap-3">
-                <motion.a 
-                  href="https://facebook.com/chamba.pe" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 sm:w-14 sm:h-14 bg-[#0090ff] hover:bg-[#0080e6] rounded-2xl flex items-center justify-center transition-all shadow-lg hover:shadow-[#0090ff]/50"
-                  aria-label="Facebook"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Facebook className="w-6 h-6 sm:w-7 sm:h-7" />
-                </motion.a>
-                <motion.a 
-                  href="https://instagram.com/chamba.pe" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 sm:w-14 sm:h-14 bg-[#ffcf06] hover:bg-[#f0c200] rounded-2xl flex items-center justify-center transition-all shadow-lg hover:shadow-[#ffcf06]/50"
-                  aria-label="Instagram"
-                  whileHover={{ scale: 1.1, rotate: -5 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Instagram className="w-6 h-6" />
-                </motion.a>
-              </div>
             </motion.div>
           </div>
 
@@ -185,7 +151,7 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <p className="text-[#64748b] outfit-medium text-sm sm:text-base text-center sm:text-left">
+            <p className="text-[#64748b] outfit-semibold text-sm sm:text-base text-center sm:text-left">
               © 2026 CHAMBA. Todos los derechos reservados
             </p>
             <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 outfit-medium text-sm sm:text-base">
@@ -362,7 +328,7 @@ export function Footer() {
                 
                 <div className="bg-[#ffcf06]/10 border-l-4 border-[#ffcf06] p-4 rounded-r-xl">
                   <p className="text-[#0F172A] text-sm outfit-semibold">
-                    📧 Contacto: <a href="mailto:privacidad@chamba.pe" className="text-[#0090ff] underline">privacidad@chamba.pe</a>
+                    📧 Contacto: <a href="mailto:informes@chamba.click" className="text-[#0090ff] underline">informes@chamba.click</a>
                   </p>
                 </div>
               </div>

@@ -1,56 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
 
-/* Space Grotesk para títulos modernos */
-h1, h2, h3, .heading {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
+@layer base {
+  /* Space Grotesk para títulos modernos */
+  h1, h2, h3, .heading {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  /* Outfit para UI y cuerpo */
+  * {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+  }
+
+  body {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+  }
 }
 
-/* Outfit para UI y cuerpo */
-* {
-  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
-}
+@layer utilities {
+  .space-grotesk {
+    font-family: 'Space Grotesk', sans-serif;
+  }
 
-.outfit-bold {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 700;
-}
+  .outfit {
+    font-family: 'Outfit', sans-serif;
+  }
 
-.outfit-semibold {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 600;
-}
+  .outfit-bold {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+  }
 
-.outfit-medium {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 500;
-}
+  .outfit-semibold {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+  }
 
-.outfit-regular {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 400;
-}
+  .outfit-medium {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+  }
 
-/* Legacy classes for compatibility */
-.gilroy-bold, .inter-bold, .bebas {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-}
+  .outfit-regular {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+  }
 
-.gilroy-semibold, .inter-semibold {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 600;
-}
+  .outfit-light {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+  }
 
-.gilroy-medium, .inter-medium {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 500;
-}
+  /* Legacy classes for compatibility */
+  .gilroy-bold, .inter-bold, .bebas {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+  }
 
-.gilroy, .inter-regular {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 400;
+  .gilroy-semibold, .inter-semibold {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+  }
+
+  .gilroy-medium, .inter-medium {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+  }
+
+  .gilroy, .inter-regular {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+  }
+
+  .gilroy-extrabold {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+  }
 }

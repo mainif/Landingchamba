@@ -68,7 +68,10 @@ export function Navbar() {
           </div>
 
           {/* Desktop CTA - Al costado derecho */}
-          <motion.button 
+          <motion.a
+            href="https://drive.google.com/file/d/1ivmGE5_QZbbZKKYVRZB_rt0aPdwk5moF/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden lg:flex bg-[#ffcf06] hover:bg-[#f0c200] text-[#0F172A] px-6 xl:px-7 py-3 rounded-full shadow-lg items-center gap-2 relative overflow-hidden group outfit-bold text-base flex-shrink-0"
             whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(255, 207, 6, 0.5)" }}
             whileTap={{ scale: 0.95 }}
@@ -78,7 +81,7 @@ export function Navbar() {
             />
             <Download className="w-5 h-5 relative z-10" />
             <span className="relative z-10">Descargar</span>
-          </motion.button>
+          </motion.a>
 
           {/* Mobile Menu Button - SOLO visible en móvil */}
           <button
@@ -121,10 +124,15 @@ export function Navbar() {
               Quiero chamba
             </button>
             <div className="pt-2 flex justify-center">
-              <button className="bg-[#ffcf06] hover:bg-[#f0c200] active:bg-[#e0b200] text-[#0F172A] px-6 py-4 rounded-xl shadow-lg inline-flex items-center gap-2 outfit-bold text-base transition-all">
+              <a
+                href="https://drive.google.com/file/d/1ivmGE5_QZbbZKKYVRZB_rt0aPdwk5moF/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#ffcf06] hover:bg-[#f0c200] active:bg-[#e0b200] text-[#0F172A] px-6 py-4 rounded-xl shadow-lg inline-flex items-center gap-2 outfit-bold text-base transition-all"
+              >
                 <Download className="w-5 h-5" />
                 Descargar CHAMBA
-              </button>
+              </a>
             </div>
           </motion.div>
         )}

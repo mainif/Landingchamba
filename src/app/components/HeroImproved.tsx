@@ -69,14 +69,17 @@ export function HeroImproved({ scrollY }: HeroProps) {
             </p>
 
             {/* CTA Button - más abajo */}
-            <motion.button
+            <motion.a
+              href="https://drive.google.com/file/d/1ivmGE5_QZbbZKKYVRZB_rt0aPdwk5moF/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-[#0090ff] hover:bg-[#0080e6] text-white px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 rounded-full shadow-2xl outfit-bold text-base sm:text-lg md:text-xl inline-flex items-center gap-2 sm:gap-3 group mt-4 sm:mt-8"
               whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0, 144, 255, 0.4)" }}
               whileTap={{ scale: 0.95 }}
             >
               <Download className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
               <span>Descargar CHAMBA</span>
-            </motion.button>
+            </motion.a>
           </motion.div>
         </div>
       </div>

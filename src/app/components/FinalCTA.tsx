@@ -9,6 +9,8 @@ export function FinalCTA() {
     email: '', 
     telefono: '' 
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const fadeInUp = {
     initial: { opacity: 0, y: 40 },
@@ -17,10 +19,44 @@ export function FinalCTA() {
     transition: { duration: 0.6 }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Aquí iría la lógica de envío
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('https://formsubmit.co/informes@chamba.click', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          nombre: formData.nombre,
+          email: formData.email,
+          telefono: formData.telefono,
+          asunto: formData.asunto,
+          _subject: `[CHAMBA] Nuevo contacto: ${formData.asunto}`,
+          _template: 'table',
+          _captcha: 'false'
+        })
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ nombre: '', asunto: '', email: '', telefono: '' });
+        setTimeout(() => {
+          setSubmitStatus('idle');
+        }, 5000);
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -66,7 +102,10 @@ export function FinalCTA() {
               Descarga CHAMBA y empieza hoy.
             </p>
 
-            <motion.button 
+            <motion.a
+              href="https://drive.google.com/file/d/1ivmGE5_QZbbZKKYVRZB_rt0aPdwk5moF/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group bg-[#FDD323] hover:bg-[#f0c200] text-[#2D3444] px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-5 rounded-3xl shadow-[0.401px_0.401px_0.567px_-0.945px_rgba(9,172,255,0.52),1.217px_1.217px_1.721px_-1.89px_rgba(9,172,255,0.49),3.216px_3.216px_4.548px_-2.834px_rgba(9,172,255,0.42),10.078px_10.078px_14.253px_-3.779px_rgba(9,172,255,0.18)] relative overflow-hidden inline-flex items-center gap-3 gilroy-extrabold text-xl sm:text-2xl"
               whileHover={{ 
                 scale: 1.05, 
@@ -83,7 +122,7 @@ export function FinalCTA() {
               />
               <Download className="w-5 h-5 sm:w-6 sm:h-6 relative z-10 text-[#2D3444]" strokeWidth={2.5} />
               <span className="relative z-10">Descargar CHAMBA</span>
-            </motion.button>
+            </motion.a>
           </motion.div>
 
           {/* Right: Contact Form */}
@@ -170,16 +209,30 @@ export function FinalCTA() {
 
                 <motion.button
                   type="submit"
-                  className="w-full bg-[#0090FF] hover:bg-[#0080e6] text-white px-6 sm:px-8 py-5 sm:py-6 rounded-3xl shadow-[0.401px_0.401px_0.567px_-0.945px_rgba(9,172,255,0.52),1.217px_1.217px_1.721px_-1.89px_rgba(9,172,255,0.49),3.216px_3.216px_4.548px_-2.834px_rgba(9,172,255,0.42),10.078px_10.078px_14.253px_-3.779px_rgba(9,172,255,0.18)] relative overflow-hidden group gilroy-extrabold text-xl sm:text-2xl flex items-center justify-center"
-                  whileHover={{ scale: 1.02, boxShadow: "0 25px 50px rgba(0, 144, 255, 0.4)" }}
-                  whileTap={{ scale: 0.98 }}
+                  disabled={isSubmitting}
+                  className={`w-full ${isSubmitting ? 'bg-gray-400' : 'bg-[#0090FF] hover:bg-[#0080e6]'} text-white px-6 sm:px-8 py-5 sm:py-6 rounded-3xl shadow-[0.401px_0.401px_0.567px_-0.945px_rgba(9,172,255,0.52),1.217px_1.217px_1.721px_-1.89px_rgba(9,172,255,0.49),3.216px_3.216px_4.548px_-2.834px_rgba(9,172,255,0.42),10.078px_10.078px_14.253px_-3.779px_rgba(9,172,255,0.18)] relative overflow-hidden group gilroy-extrabold text-xl sm:text-2xl flex items-center justify-center`}
+                  whileHover={!isSubmitting ? { scale: 1.02, boxShadow: "0 25px 50px rgba(0, 144, 255, 0.4)" } : {}}
+                  whileTap={!isSubmitting ? { scale: 0.98 } : {}}
                 >
-                  <span className="relative z-10">Enviar Mensaje</span>
+                  <span className="relative z-10">
+                    {isSubmitting ? 'Enviando...' : submitStatus === 'success' ? '¡Enviado!' : 'Enviar Mensaje'}
+                  </span>
                   <motion.div
                     className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20"
                     transition={{ duration: 0.3 }}
                   />
                 </motion.button>
+                
+                {submitStatus === 'success' && (
+                  <p className="text-green-600 text-center gilroy-medium text-lg">
+                    ¡Mensaje enviado exitosamente! Te contactaremos pronto.
+                  </p>
+                )}
+                {submitStatus === 'error' && (
+                  <p className="text-red-600 text-center gilroy-medium text-lg">
+                    Hubo un error. Por favor, intenta de nuevo o escribe a informes@chamba.click
+                  </p>
+                )}
               </form>
             </div>
           </motion.div>
